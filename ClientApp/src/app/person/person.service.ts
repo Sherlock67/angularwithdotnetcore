@@ -7,7 +7,7 @@ import { Person } from "./person";
   providedIn: 'root'
 })
 export class PersonService {
-  private apiUrl = "https://localhost:44456/api";
+  private apiUrl = "https://localhost:7171/api";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type' : 'application/json'
@@ -15,7 +15,7 @@ export class PersonService {
   };
   constructor(private httpClient: HttpClient) { }
   createPerson(person: object): Observable<Person> {
-    return this.httpClient.post<Person>(this.apiUrl + '/CreatePerson/', JSON.stringify(person), this.httpOptions)
+    return this.httpClient.post<Person>(this.apiUrl + '/Person/CreatePerson', JSON.stringify(person), this.httpOptions)
       .pipe(
         catchError(this.errorHandler)
       );

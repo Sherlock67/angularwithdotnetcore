@@ -1,7 +1,9 @@
 ﻿{
   "iisSettings": {
+
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
+   
     "iisExpress": {
       "applicationUrl": "http://localhost:37920",
       "sslPort": 44356
@@ -9,6 +11,7 @@
   },
   "profiles": {
     "Project2": {
+      "Access-Control-Allow-Origin": "*",
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7171;http://localhost:5171",

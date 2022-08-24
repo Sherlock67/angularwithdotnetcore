@@ -1,6 +1,6 @@
 export interface Person {
   Id: number;
-  ShirtNo: number;
-  Name: string;
-  Goals: number;
+  shirtNo: number;
+  name: string;
+  goals: number;
 }

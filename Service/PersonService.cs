@@ -1,4 +1,5 @@
-﻿using Project2.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using Project2.Data;
 using Project2.Model;
 
 namespace Project2.Service
@@ -12,9 +13,9 @@ namespace Project2.Service
             this.db = db;
         }
 
-        public async Task<Person> CreatePerson(Person p)
+        public async Task<Person> CreatePerson( Person p)
         {
-            db.personTables.Add(p);
+            await db.personTables.AddAsync(p);
             await db.SaveChangesAsync();
             return p;
         }
